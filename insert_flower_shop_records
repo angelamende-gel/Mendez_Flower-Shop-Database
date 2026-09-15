@@ -1,0 +1,44 @@
+INSERT INTO Customers (CustomerID, Name, Phone, Email) VALUES
+(1, 'Angela Mendez', '09111111111', 'angelamendez01@gmail.com'),
+(2, 'Ranilo Marchadesch Jr', '09222222222', 'jayrmarchadesch02@gmail.com'),
+(3, 'Rea Oliveros', '09333333333', 'reaoliveros03@gmail.com'),
+(4, 'Joanna Petate', '09444444444', 'joannapetate04@gmail.com'),
+(5, 'Michaela Marie Sanchez', '09555555555', 'michaelamariesanches05@gmail.com');
+
+
+INSERT INTO Employees (EmployeeID, Name, Position) VALUES
+(1, 'Gel Mendez', 'Cashier'),
+(2, 'Jayr Marchadesch', 'Florist'),
+(3, 'Michaela Oliveros', 'Cashier'),
+(4, 'Marie Petate', 'Florist'),
+(5, 'Mae Vilanueva', 'Manager');
+
+
+INSERT INTO Flowers (FlowerID, FlowerName, Category, Price) VALUES
+(1, 'Roses Bouquet', 'Roses', 250.00),
+(2, 'Sunflower Bouquet', 'Sunflowers', 350.00),
+(3, 'Tulip Arrangement', 'Tulips', 450.00),
+(4, 'Lily Bouquet', 'Lilies', 550.00),
+(5, 'Baby Breath Bouquet', 'Baby Breath', 650.00);
+
+INSERT INTO Orders (OrderID, CustomerID, EmployeeID, OrderDate, TotalAmount) VALUES
+(1, 1, 1, '2026-09-01', 1000.00),
+(2, 2, 2, '2026-09-02', 2000.00),
+(3, 3, 3, '2026-09-03', 3000.00),
+(4, 4, 1, '2026-09-04', 4000.00),
+(5, 5, 4, '2026-09-05', 5000.00);
+
+INSERT INTO OrderDetails (OrderDetailID, OrderID, FlowerID, Quantity, Subtotal) VALUES
+(1, 1, 1, 2, 1000.00),
+(2, 2, 2, 1, 2000.00),
+(3, 3, 3, 2, 3000.00),
+(4, 4, 4, 2, 4000.00),
+(5, 5, 5, 3, 5000.00);
+
+
+INSERT INTO Payments (PaymentID, OrderID, PaymentDate, PaymentMethod, Amount) VALUES
+(1, 1, '2026-09-01', 'Cash', 1000.00),
+(2, 2, '2026-09-02', 'GCash', 2000.00),
+(3, 3, '2026-09-03', 'Cash', 3000.00),
+(4, 4, '2026-09-04', 'Card', 4000.00),
+(5, 5, '2026-09-05', 'GCash', 5000.00);

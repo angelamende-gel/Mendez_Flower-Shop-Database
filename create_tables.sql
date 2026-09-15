@@ -2,21 +2,21 @@ CREATE TABLE Customers(
     CustomerID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Phone VARCHAR(20),
-    Email VARCHAR(100),
+    Email VARCHAR(100)
 );
 
 
 CREATE TABLE Employees(
     EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
-    Position VARCHAR(50),
+    Position VARCHAR(50)
     );
 
 CREATE TABLE Flower(
     FlowerID INT AUTO_INCREMENT PRIMARY KEY,
     FlowerName VARCHAR(100) NOT NULL,
     Category VARCHAR(50),
-    Price DECIMAL(10,2) NOT NULL,
+    Price DECIMAL(10,2) NOT NULL
     );
 
 CREATE TABLE Orders (
@@ -26,7 +26,7 @@ CREATE TABLE Orders (
     OrderDateID NOT NULL,
     TotalAmount DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
-    FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),
+    FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
     );
 
 CREATE TABLE OrderDetails (
@@ -36,7 +36,7 @@ CREATE TABLE OrderDetails (
     Quantity INT NOT NULL,
     Subtotal DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
-    FOREIGN KEY (FlowerID) REFERENCES Flowers (FlowerID),
+    FOREIGN KEY (FlowerID) REFERENCES Flowers (FlowerID)
     );
 
     
@@ -46,6 +46,6 @@ CREATE TABLE Payments (
     PaymentDate DATE NOT NULL,
     PaymentMethod VARCHAR(30),
     Amount DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
     );
     
